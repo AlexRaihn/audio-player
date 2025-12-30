@@ -55,8 +55,9 @@ watch(audioModel, async () => {
                 :max-duration="audioModel.duration" :index="currentAudio" :playlist="props.playlist"
                 @is-pause="startOrPause()" @next="actionButtonAudioPlayer.nextAudio()"
                 @prev="actionButtonAudioPlayer.prevAudio()" />
-            <div>
+            <div class="flex flex-col">
                 {{ actionButtonAudioPlayer.currentAudioFromPlaylist.value?.artist }}
+                <div class="text-gray-500">{{ actionButtonAudioPlayer.currentAudioFromPlaylist.value?.title }}</div>
             </div>
             <AudioVolumeRange v-model="volume" @update:model-value="audioModel.volume = volume" />
         </div>
