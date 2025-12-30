@@ -1,0 +1,9 @@
+.audio-btn {
+    padding: 4px;
+    border-radius: 8px;
+    background-color: var(--color-blue-500);
+    &:disabled {
+        opacity: 0.6; /* или 0.5 — подбери по вкусу */
+        cursor: not-allowed;
+    }
+}
